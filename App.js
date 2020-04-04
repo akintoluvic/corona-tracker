@@ -5,26 +5,52 @@ import {
   ScrollView,
   View,
   Text,
+  Image,
   StatusBar,
 } from 'react-native';
+import { isRequired } from 'react-native/Libraries/DeprecatedPropTypes/DeprecatedColorPropType';
 
 const App: () => React$Node = () => {
   return (
-    <>
-      <Text>Corona</Text>
-      {/* <StatusBar barStyle="dark-content" /> */}
-    </>
+    <View style={styles.container}>
+      <View style={styles.logo}>
+        <Image source={require('./logo.png')} />
+      </View>
+      <View style={styles.greet}>
+        <Text style={styles.greetSmall} >
+          Welcome, Pauline
+        </Text>
+        <Text style={styles.greetBig} >
+          How are you feeling?
+        </Text>
+        <Text style={styles.greetSmall} >
+          March 28, 2020
+        </Text>
+      </View>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
-  footer: {
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
+  container: {
+    backgroundColor: '#22272C',
+    
   },
+  logo: {
+    display: 'flex',
+    alignItems: 'center',
+    paddingTop: 35,
+    paddingBottom: 25,
+  },
+  greet: {
+    paddingLeft: 30
+  },
+  greetBig: {
+    fontFamily: 'Roboto',
+    color: '#fff',
+    fontSize: 24,
+    fontWeight: 'bold',
+  }
 });
 
 export default App;
