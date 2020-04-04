@@ -12,9 +12,9 @@ import { isRequired } from 'react-native/Libraries/DeprecatedPropTypes/Deprecate
 
 const App: () => React$Node = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.logo}>
-        <Image source={require('./logo.png')} />
+        <Image source={require('./images/logo.png')} />
       </View>
       <View style={styles.greet}>
         <Text style={styles.greetSmall} >
@@ -27,7 +27,7 @@ const App: () => React$Node = () => {
           March 28, 2020
         </Text>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
   greet: {
     paddingLeft: 30,
-    paddingBottom: 38
+    paddingBottom: 38,
   },
   greetBig: {
     fontFamily: 'Roboto',
