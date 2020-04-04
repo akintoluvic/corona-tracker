@@ -7,27 +7,49 @@ import {
   Text,
   Image,
   StatusBar,
+  TouchableOpacity
 } from 'react-native';
+import Title from './Title'
 
-const TrackNow = ({ title }) => {
+const TrackNow = () => {
   return (
-    <View>
-        <Text style={styles.title}>
-            { title }
-        </Text>
-    </View>
+      <>
+        <Title title='Symptoms Tracker' />
+        <View style={styles.container}>
+            <Image source={require('../images/corona.png')} />
+            <View>
+                <Text style={styles.title}>
+                    { title }
+                </Text>
+                <TouchableOpacity 
+                    style={styles.btn}
+                    onPress={()=>{ }}
+                >
+                    <Text style={styles.btnText}>
+                        + Add Item
+                    </Text>
+                </TouchableOpacity>
+            </View>
+            
+        </View>
+      </>
   );
 };
 
 const styles = StyleSheet.create({
-  title: {
-    paddingTop: 30,
-    paddingBottom: 25,
-    fontFamily: 'Roboto',
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold'
-  }
+    container: {
+        padding: 25,
+        flexDirection: 'row',
+
+    },
+    title: {
+        paddingTop: 30,
+        paddingBottom: 25,
+        fontFamily: 'Roboto',
+        color: '#fff',
+        fontSize: 16,
+        fontWeight: 'bold'
+    }
 });
 
 export default TrackNow;

@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#22272C',
   },
   logo: {
-    display: 'flex',
     alignItems: 'center',
     paddingTop: 35,
     paddingBottom: 25,
