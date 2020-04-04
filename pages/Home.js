@@ -9,13 +9,14 @@ import {
     StatusBar,
   } from 'react-native';
 import HomeHeader from '../components/HomeHeader';
+import TrackNow from '../components/TrackNow';
 
 const Home = () => {
   return (
     <>
       <HomeHeader />
       <ScrollView style={styles.scrollContainer}>
-
+          <TrackNow />
       </ScrollView>
     </>
   );
@@ -23,8 +24,10 @@ const Home = () => {
 
 const styles = StyleSheet.create({
     scrollContainer: {
-      paddingTop: 30,
+      paddingTop: 5,
       paddingBottom: 25,
+      paddingLeft: 25,
+      paddingRight: 25,
       fontFamily: 'Roboto',
       color: '#fff',
       fontSize: 16,
