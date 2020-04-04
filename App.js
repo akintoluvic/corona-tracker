@@ -43,13 +43,19 @@ const styles = StyleSheet.create({
     paddingBottom: 25,
   },
   greet: {
-    paddingLeft: 30
+    paddingLeft: 30,
+    paddingBottom: 38
   },
   greetBig: {
     fontFamily: 'Roboto',
     color: '#fff',
     fontSize: 24,
     fontWeight: 'bold',
+  },
+  greetSmall: {
+    fontFamily: 'Roboto',
+    color: '#E2E3E3',
+    fontSize: 14,
   }
 });
 
