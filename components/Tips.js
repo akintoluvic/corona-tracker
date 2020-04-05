@@ -8,15 +8,18 @@ import Tip from './Tip';
 
 const History = () => {
   return (
-      <>
+      <View>
         <Title title='Prevention, Tips and more' />
-        <View>
+        <>
+            <Tip />
+            <Tip />
+            <Tip />
             <Tip />
             <Tip />
             <Tip />
             
-        </View>
-      </>
+        </>
+      </View>
   );
 };
 

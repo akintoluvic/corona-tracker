@@ -29,18 +29,19 @@ const Home = () => {
 
 const styles = StyleSheet.create({
     home: {
-      // height: 100,
+      flex: 1,
     },
     scroll: {
+      flex: 1,
       paddingTop: 5,
-      paddingLeft: 25,
-      paddingRight: 25,
       backgroundColor: '#2D3136',
       borderTopRightRadius: 35,
       borderTopLeftRadius: 35
     },
     scrollContainer: {
-      // flex: 1
+      // height: 400,
+      paddingLeft: 25,
+      paddingRight: 25,
     },
   });
 
