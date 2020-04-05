@@ -14,13 +14,13 @@ import Tips from '../components/Tips';
 
 const Home = () => {
   return (
-    <>
+    <SafeAreaView>
       <HomeHeader />
       <ScrollView style={styles.scrollContainer}>
           <TrackNow />
           <Tips />
       </ScrollView>
-    </>
+    </SafeAreaView>
   );
 };
 

@@ -9,6 +9,7 @@ import {
 
 const Tip = () => {
   return (
+      <View>
                 <TouchableOpacity 
                     style={styles.btn}
                     onPress={()=>{ }}
@@ -22,20 +23,22 @@ const Tip = () => {
                             World Health Organization
                         </Text>
                     </View>
-                </TouchableOpacity>
+                </TouchableOpacity></View>
   );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        padding: 25,
+    btn: {
+        flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
-        borderRadius: 15,
-        backgroundColor: '#22272C',
+        paddingTop: 10,
+        paddingBottom: 10,
+        borderBottomColor: '#C4C4C4',
+        borderBottomWidth: 1,
     },
     contain: {
-        
+        paddingLeft: 18,
 
     },
     title: {
@@ -45,7 +48,7 @@ const styles = StyleSheet.create({
     },
     source: {
         fontFamily: 'Roboto',
-        color: '#fff',
+        color: '#85888A',
         fontSize: 14,
     },
     // btn: {
