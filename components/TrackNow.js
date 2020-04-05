@@ -13,7 +13,7 @@ import Title from './Title'
 
 const TrackNow = () => {
   return (
-      <>
+      <View style={{flex:1}}>
         <Title title='Symptoms Tracker' />
         <View style={styles.container}>
             <Image source={require('../images/corona.png')} />
@@ -35,12 +35,13 @@ const TrackNow = () => {
             </View>
             
         </View>
-      </>
+      </View>
   );
 };
 
 const styles = StyleSheet.create({
     container: {
+        flex: 1,
         padding: 25,
         flexDirection: 'row',
         alignItems: 'center',

@@ -16,7 +16,7 @@ const App: () => React$Node = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#22272C',
-    
+    flex: 1,
   },
 });
 

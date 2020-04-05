@@ -33,6 +33,7 @@ const HomeHeader = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#22272C',
+    // height: 231,
   },
   logo: {
     alignItems: 'center',
