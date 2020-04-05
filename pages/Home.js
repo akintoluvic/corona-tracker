@@ -10,6 +10,7 @@ import {
   } from 'react-native';
 import HomeHeader from '../components/HomeHeader';
 import TrackNow from '../components/TrackNow';
+import Tips from '../components/Tips';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <HomeHeader />
       <ScrollView style={styles.scrollContainer}>
           <TrackNow />
+          <Tips />
       </ScrollView>
     </>
   );
