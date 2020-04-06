@@ -9,7 +9,7 @@ import {
     StatusBar,
   } from 'react-native';
 import PreventionHeader from '../components/PreventionHeader';
-import TrackNow from '../components/TrackNow';
+import PreventionBody from '../components/PreventionBody';
 import Tips from '../components/Tips';
 
 const PreventionTips = () => {
@@ -17,10 +17,9 @@ const PreventionTips = () => {
     <SafeAreaView style={styles.container}>
       <PreventionHeader />
       <View style={styles.scroll}>
-      <ScrollView style={styles.scrollContainer}>
-          <TrackNow />
-          <Tips />
-      </ScrollView>
+        <ScrollView style={styles.scrollContainer}>
+            <PreventionBody />
+        </ScrollView>
       </View>
 
     </SafeAreaView>
@@ -35,15 +34,10 @@ const styles = StyleSheet.create({
     },
     scroll: {
       flex: 1,
-      paddingTop: 5,
-      backgroundColor: '#2D3136',
-      borderTopRightRadius: 35,
-      borderTopLeftRadius: 35
+      paddingTop: 25,
     },
     scrollContainer: {
       // height: 400,
-      paddingLeft: 25,
-      paddingRight: 25,
     },
   });
 

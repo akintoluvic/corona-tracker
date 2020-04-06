@@ -4,7 +4,6 @@ import {
   View,
   Text,
   Image,
-  TouchableOpacity
 } from 'react-native';
 import TopNav from '../components/TopNav';
 
