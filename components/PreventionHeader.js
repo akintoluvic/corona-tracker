@@ -6,25 +6,25 @@ import {
   Image,
   TouchableOpacity
 } from 'react-native';
-import PreventionTips from '../pages/PreventionTips';
+import TopNav from '../components/TopNav';
 
 const PreventionHeader = () => {
   return (
-      <View>
-                <TouchableOpacity 
-                    style={styles.btn}
-                    onPress={()=>{ }}
-                >   
-                    <Image source={require('../images/tip-image.png')} />
-                    <View style={styles.contain}>
-                        <Text style={styles.title}>
-                            Five steps to kicking out corona virus
-                        </Text>
-                        <Text style={styles.source}>
-                            World Health Organization
-                        </Text>
-                    </View>
-                </TouchableOpacity></View>
+    <View>
+        <TopNav />
+        <View style={styles.imageContainer}>
+            <Image 
+                source={require('../images/tip-image.png')} 
+                style={styles.image}
+            />
+        </View>
+        <Text style={styles.title}>
+            Five steps to kicking out corona virus
+        </Text>
+        <Text style={styles.source}>
+            World Health Organization
+        </Text>
+    </View>
   );
 };
 
@@ -38,10 +38,6 @@ const styles = StyleSheet.create({
         borderBottomColor: '#C4C4C4',
         borderBottomWidth: 1,
     },
-    contain: {
-        paddingLeft: 18,
-
-    },
     title: {
         fontFamily: 'Roboto',
         color: '#fff',
@@ -52,13 +48,6 @@ const styles = StyleSheet.create({
         color: '#85888A',
         fontSize: 14,
     },
-    // btn: {
-    //     borderRadius: 5,
-    //     backgroundColor: '#E49008',
-    //     marginTop: 7,
-    //     padding: 5,
-    //     width: 107
-    // },
 });
 
 export default PreventionHeader;
