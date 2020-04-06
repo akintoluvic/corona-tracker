@@ -5,12 +5,12 @@ import {
   Text,
   Image,
 } from 'react-native';
-import TopNav from '../components/TopNav';
+
 
 const PreventionHeader = () => {
   return (
     <View  style={styles.container}>
-        <TopNav />
+        
         <View style={styles.imageContainer}>
             <Image 
                 source={require('../images/tip-image.png')} 
@@ -29,8 +29,7 @@ const PreventionHeader = () => {
 
 const styles = StyleSheet.create({
     container: {
-        paddingLeft: 25,
-        paddingRight: 25,
+        marginBottom: 25,
     },
     imageContainer: {
         alignItems: 'center',
