@@ -8,14 +8,14 @@ import {
     Image,
     StatusBar,
   } from 'react-native';
-import HomeHeader from '../components/HomeHeader';
+import PreventionHeader from '../components/PreventionHeader';
 import TrackNow from '../components/TrackNow';
 import Tips from '../components/Tips';
 
-const Tips = () => {
+const PreventionTips = () => {
   return (
     <SafeAreaView style={styles.home}>
-      <HomeHeader />
+      <PreventionHeader />
       <View style={styles.scroll}>
       <ScrollView style={styles.scrollContainer}>
           <TrackNow />
@@ -45,4 +45,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default Tips;
+export default PreventionTips;
