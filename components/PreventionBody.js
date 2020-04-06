@@ -3,9 +3,7 @@ import {
   StyleSheet,
   View,
   Text,
-  Image,
 } from 'react-native';
-import TopNav from '../components/TopNav';
 
 const PreventionBody = () => {
   return (

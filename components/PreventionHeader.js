@@ -29,7 +29,8 @@ const PreventionHeader = () => {
 
 const styles = StyleSheet.create({
     container: {
-        
+        paddingLeft: 25,
+        paddingRight: 25,
     },
     imageContainer: {
         alignItems: 'center',
