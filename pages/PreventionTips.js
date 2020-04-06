@@ -14,7 +14,7 @@ import Tips from '../components/Tips';
 
 const PreventionTips = () => {
   return (
-    <SafeAreaView style={styles.home}>
+    <SafeAreaView style={styles.container}>
       <PreventionHeader />
       <View style={styles.scroll}>
       <ScrollView style={styles.scrollContainer}>
@@ -28,8 +28,10 @@ const PreventionTips = () => {
 };
 
 const styles = StyleSheet.create({
-    home: {
+    container: {
       flex: 1,
+      paddingLeft: 25,
+      paddingRight: 25,
     },
     scroll: {
       flex: 1,

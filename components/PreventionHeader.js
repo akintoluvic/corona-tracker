@@ -10,7 +10,7 @@ import TopNav from '../components/TopNav';
 
 const PreventionHeader = () => {
   return (
-    <View>
+    <View  style={styles.container}>
         <TopNav />
         <View style={styles.imageContainer}>
             <Image 
@@ -29,6 +29,20 @@ const PreventionHeader = () => {
 };
 
 const styles = StyleSheet.create({
+    container: {
+        
+    },
+    imageContainer: {
+        alignItems: 'center',
+    },
+    image: {
+        width: 90,
+        height: 90,
+        borderRadius: 5,
+        marginTop: 36,
+        marginBottom: 10,
+
+    },
     btn: {
         flex: 1,
         flexDirection: 'row',
@@ -42,11 +56,17 @@ const styles = StyleSheet.create({
         fontFamily: 'Roboto',
         color: '#fff',
         fontSize: 16,
+        marginBottom: 2,
+        textAlign: 'center',
     },
     source: {
         fontFamily: 'Roboto',
         color: '#85888A',
-        fontSize: 14,
+        fontSize: 12,
+        textAlign: 'center',
+        borderBottomColor: '#c4c4c4',
+        borderBottomWidth: 1,
+        paddingBottom: 10,
     },
 });
 

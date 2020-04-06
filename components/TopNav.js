@@ -10,13 +10,13 @@ import PreventionTips from '../pages/PreventionTips';
 
 const TopNav = () => {
   return (
-        <View>
+        <View style={styles.container}>
             <TouchableOpacity 
                 style={styles.btn}
                 onPress={()=>{ }}
             >
-                
-                <Image source={require('../images/tip-image.png')} />
+                <Text>X</Text> 
+                {/* <Image source={require('../images/tip-image.png')} /> */}
             </TouchableOpacity> 
             <Text style={styles.title}>
                 Prevention Tips
@@ -26,6 +26,11 @@ const TopNav = () => {
 };
 
 const styles = StyleSheet.create({
+    container: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingTop: 20,
+    },
     btn: {
     },
     title: {

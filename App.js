@@ -4,11 +4,13 @@ import {
   View,
 } from 'react-native';
 import Home from './pages/Home';
+import PreventionTips from './pages/PreventionTips';
 
 const App: () => React$Node = () => {
   return (
     <View style={styles.container}>
-      <Home />
+      {/* <Home /> */}
+      <PreventionTips />
     </View>
   );
 };
