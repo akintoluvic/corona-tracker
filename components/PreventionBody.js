@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     },
     body: {
         fontFamily: 'Roboto',
-        color: '#7B819B',
+        color: '#5D6381',
         fontSize: 14,
         marginBottom: 10,
     },
