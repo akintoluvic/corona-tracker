@@ -24,7 +24,7 @@ const Login = () => {
       <View style={styles.scroll}>
       </View>
       <View style={styles.scrol}>
-          <Text style={styles.text}>
+          <Text style={{...styles.text, ...styles.white}}>
             User  Registration
           </Text>
           <View style={styles.form}>
@@ -46,7 +46,7 @@ const Login = () => {
                     LOGIN
                 </Text>
               </TouchableOpacity>
-              <Text style={styles.text}>
+              <Text style={{...styles.text, ...styles.dark}}>
                   New User? Sign Up here
               </Text>
           </View>
@@ -109,8 +109,13 @@ const styles = StyleSheet.create({
         fontFamily: 'Roboto',
         fontWeight: 'bold',
         fontSize: 16,
-        color: '#7B819B',
         textAlign: 'center',
+    },
+    dark: {
+        color: '#7B819B',
+    },
+    white: {
+        color: '#fff'
     }
   });
 
