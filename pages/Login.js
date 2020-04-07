@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
     SafeAreaView,
     StyleSheet,
@@ -6,6 +6,7 @@ import {
     View,
     Text,
     TouchableOpacity,
+    TextInput,
     Image,
     StatusBar,
   } from 'react-native';
@@ -15,6 +16,9 @@ import PreventionBody from '../components/PreventionBody';
 import References from '../components/References';
 
 const Login = () => {
+    const [ user, setUser ] = useState('');
+    const [ password, setPassword ] = useState('');
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.scroll}>
@@ -24,6 +28,16 @@ const Login = () => {
             User  Registration
           </Text>
           <View style={styles.form}>
+              <TextInput
+                placeholder='Username or phone number'
+                style={styles.input}
+                onChangeText={textValue => {setUser}}
+              />
+              <TextInput
+                placeholder='Password'
+                style={styles.input}
+                onChangeText={textValue => {setPassword}}
+              />
               <TouchableOpacity 
                 style={styles.btn}
                 onPress={()=>{ }}
@@ -64,6 +78,18 @@ const styles = StyleSheet.create({
       paddingBottom: 35,
       borderTopRightRadius: 35,
       borderTopLeftRadius: 35
+    },
+    input: {
+        color: '#7B819B',
+        backgroundColor: '#F4F7FF',
+        borderRadius: 15,
+        marginBottom: 15,
+        paddingTop: 17,
+        paddingBottom:17,
+        paddingLeft: 25,
+        paddingRight: 25,
+        fontSize: 14,
+        fontFamily: 'Roboto',
     },
     btn: {
         backgroundColor: '#F68D4B',
