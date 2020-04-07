@@ -21,7 +21,7 @@ const PreventionHeader = () => {
             Five steps to kicking out corona virus
         </Text>
         <Text style={styles.source}>
-            World Health Organization
+            World Health Organization - March 7, 2020
         </Text>
     </View>
   );
@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
     },
     title: {
         fontFamily: 'Roboto',
-        color: '#fff',
+        color: '#5D6381',
+        fontWeight: 'bold',
         fontSize: 16,
         marginBottom: 2,
         textAlign: 'center',
