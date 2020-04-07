@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontFamily: 'Roboto',
-        color: '#fff',
+        color: '#000',
         fontSize: 16,
     },
     source: {
