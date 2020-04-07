@@ -9,6 +9,7 @@ import {
     TextInput,
     Image,
     StatusBar,
+    Alert,
   } from 'react-native';
   import TopNav from '../components/TopNav';
 import PreventionHeader from '../components/PreventionHeader';
@@ -20,8 +21,9 @@ const Login = () => {
     const [ password, setPassword ] = useState('');
 
   return (
-    <SafeAreaView style={styles.container}>
+    <ScrollView style={styles.container}>
       <View style={styles.scroll}>
+        <Image source={require('../images/logo.png')} />
       </View>
       <View style={styles.scrol}>
           <Text style={{...styles.text, ...styles.white}}>
@@ -31,16 +33,16 @@ const Login = () => {
               <TextInput
                 placeholder='Username or phone number'
                 style={styles.input}
-                onChangeText={textValue => {setUser}}
+                onChangeText={textValue => setUser(textValue)}
               />
               <TextInput
                 placeholder='Password'
                 style={styles.input}
-                onChangeText={textValue => {setPassword}}
+                onChangeText={textValue => setPassword(textValue)}
               />
               <TouchableOpacity 
                 style={styles.btn}
-                onPress={()=>{ }}
+                onPress={()=>Alert.alert(user, password)}
               >
                 <Text style={styles.btnText}>
                     LOGIN
@@ -56,7 +58,7 @@ const Login = () => {
                     
                     
 
-    </SafeAreaView>
+    </ScrollView>
   );
 };
 
@@ -68,6 +70,10 @@ const styles = StyleSheet.create({
     scroll: {
       flex: 1,
       paddingTop: 25,
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginTop: 120,
+      padding: 120,
     },
     form: {
       paddingLeft: 25,
