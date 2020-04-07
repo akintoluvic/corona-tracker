@@ -9,8 +9,8 @@ import PreventionTips from './pages/PreventionTips';
 const App: () => React$Node = () => {
   return (
     <View style={styles.container}>
-      <Home />
-      {/* <PreventionTips /> */}
+      {/* <Home /> */}
+      <PreventionTips />
     </View>
   );
 };
