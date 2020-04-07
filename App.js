@@ -5,12 +5,14 @@ import {
 } from 'react-native';
 import Home from './pages/Home';
 import PreventionTips from './pages/PreventionTips';
+import Login from './pages/Login';
 
 const App: () => React$Node = () => {
   return (
     <View style={styles.container}>
       {/* <Home /> */}
-      <PreventionTips />
+      {/* <PreventionTips /> */}
+      <Login />
     </View>
   );
 };
