@@ -6,13 +6,15 @@ import {
 import Home from './pages/Home';
 import PreventionTips from './pages/PreventionTips';
 import Login from './pages/Login';
+import SignUp from './pages/SignUp';
 
 const App: () => React$Node = () => {
   return (
     <View style={styles.container}>
       {/* <Home /> */}
       {/* <PreventionTips /> */}
-      <Login />
+      {/* <Login /> */}
+      <SignUp />
     </View>
   );
 };
