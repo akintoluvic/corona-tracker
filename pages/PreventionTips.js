@@ -32,7 +32,7 @@ const PreventionTips = () => {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      
+      backgroundColor: '#F9FAFF',
     },
     scroll: {
       flex: 1,

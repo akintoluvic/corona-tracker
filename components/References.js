@@ -31,14 +31,14 @@ const styles = StyleSheet.create({
     },
     title: {
         fontFamily: 'Roboto',
-        color: '#fff',
+        color: '#7B819B',
         fontSize: 12,
         marginBottom: 10,
         paddingTop: 12,
     },
     body: {
         fontFamily: 'Roboto',
-        color: '#85888A',
+        color: '#7B819B',
         fontSize: 12,
         marginBottom: 10,
         textDecorationLine: 'underline',
