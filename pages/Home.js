@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     scroll: {
       flex: 1,
       paddingTop: 5,
-      backgroundColor: '#2D3136',
+      backgroundColor: '#E4E9F5',
       borderTopRightRadius: 35,
       borderTopLeftRadius: 35
     },

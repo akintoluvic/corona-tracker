@@ -9,15 +9,15 @@ import PreventionTips from './pages/PreventionTips';
 const App: () => React$Node = () => {
   return (
     <View style={styles.container}>
-      {/* <Home /> */}
-      <PreventionTips />
+      <Home />
+      {/* <PreventionTips /> */}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#22272C',
+    backgroundColor: '#4B5EB2',
     flex: 1,
   },
 });

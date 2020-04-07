@@ -32,7 +32,7 @@ const HomeHeader = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#22272C',
+    backgroundColor: '#4B5EB2',
     // height: 231,
   },
   logo: {
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   },
   greetSmall: {
     fontFamily: 'Roboto',
-    color: '#E2E3E3',
+    color: '#fff',
     fontSize: 14,
   }
 });

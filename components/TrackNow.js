@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         borderRadius: 15,
-        backgroundColor: '#22272C',
+        backgroundColor: '#F4F7FF',
     },
     contain: {
         paddingLeft: 20,
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontFamily: 'Roboto',
-        color: '#fff',
+        color: '#000',
         fontSize: 14,
     },
     btn: {

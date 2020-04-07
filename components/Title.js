@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     paddingTop: 30,
     paddingBottom: 25,
     fontFamily: 'Roboto',
-    color: '#fff',
+    color: '#4B5EB2',
     fontSize: 16,
     fontWeight: 'bold'
   }
