@@ -21,7 +21,7 @@ const Question = () => {
           </Text>
           <View style={styles.btns}>
                 <TouchableOpacity 
-                    style={styles.btn}
+                    style={{...styles.btn, backgroundColor: '#E49008',}}
                     onPress={()=>{ }}
                 >
                     <Text style={styles.btnText}>
@@ -29,7 +29,7 @@ const Question = () => {
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity 
-                    style={styles.btn}
+                    style={{...styles.btn, backgroundColor: '#E49008',}}
                     onPress={()=>{ }}
                 >
                     <Text style={styles.btnText}>
@@ -52,9 +52,25 @@ const styles = StyleSheet.create({
         fontFamily: 'Roboto',
         color: '#000',
         fontSize: 14,
+        color: '#85888A',
+        fontSize: 12,
+        textAlign: 'center',
+        marginBottom: 20,
     },
     body: {
 
+        fontFamily: 'Roboto',
+        fontSize: 24,
+        lineHeight: 28,
+        textAlign: 'center',
+
+        color: '#4B5EB2',
+    },
+    btns: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        marginTop: 25,
+        marginBottom: 13,
     },
     btn: {
         borderRadius: 5,

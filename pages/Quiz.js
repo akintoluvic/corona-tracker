@@ -8,10 +8,9 @@ import {
     Image,
     StatusBar,
   } from 'react-native';
-  import TopNav from '../components/TopNav';
-import PreventionHeader from '../components/PreventionHeader';
-import PreventionBody from '../components/PreventionBody';
-import References from '../components/References';
+import TopNav from '../components/TopNav';
+import Question from '../components/Question';
+
 
 const Quiz = () => {
   return (
@@ -19,9 +18,7 @@ const Quiz = () => {
       <TopNav />
       <View style={styles.scroll}>
         <ScrollView style={styles.scrollContainer}>
-            <PreventionHeader />
-            <PreventionBody />
-            <References />
+            <Question />
         </ScrollView>
       </View>
 
