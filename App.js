@@ -7,14 +7,16 @@ import Home from './pages/Home';
 import PreventionTips from './pages/PreventionTips';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import Quiz from './pages/Quiz';
 
 const App: () => React$Node = () => {
   return (
     <View style={styles.container}>
-      <Home />
+      {/* <Home /> */}
       {/* <PreventionTips /> */}
       {/* <Login /> */}
       {/* <SignUp /> */}
+      <Quiz />
     </View>
   );
 };
