@@ -15,8 +15,7 @@ const TopNav = () => {
                 style={styles.btn}
                 onPress={()=>{ }}
             >
-                <Text>X</Text> 
-                {/* <Image source={require('../images/tip-image.png')} /> */}
+                <Image source={require('../images/left.png')} />
             </TouchableOpacity> 
             <Text style={styles.title}>
                 Prevention Tips
@@ -29,6 +28,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         justifyContent: 'space-between',
+        alignItems: 'center',
         paddingTop: 20,
         paddingLeft: 25,
         paddingRight: 25,
