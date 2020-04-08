@@ -13,7 +13,7 @@ const PreventionHeader = () => {
         
         <View style={styles.imageContainer}>
             <Image 
-                source={require('../images/tip-image.png')} 
+                source={require('../images/tip.png')} 
                 style={styles.image}
             />
         </View>

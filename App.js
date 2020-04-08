@@ -11,10 +11,10 @@ import SignUp from './pages/SignUp';
 const App: () => React$Node = () => {
   return (
     <View style={styles.container}>
-      {/* <Home /> */}
+      <Home />
       {/* <PreventionTips /> */}
       {/* <Login /> */}
-      <SignUp />
+      {/* <SignUp /> */}
     </View>
   );
 };
