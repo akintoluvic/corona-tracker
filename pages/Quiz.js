@@ -9,7 +9,7 @@ import {
     StatusBar,
   } from 'react-native';
 import TopNav from '../components/TopNav';
-import Question from '../components/Question';
+import Question from '../components/Questions';
 
 
 const Quiz = () => {

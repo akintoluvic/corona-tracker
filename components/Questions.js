@@ -10,7 +10,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-const Question = () => {
+const Questions = () => {
   return (
       <View style={styles.container} >
           <Text style={styles.title}>
@@ -77,4 +77,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Question;
+export default Questions;
