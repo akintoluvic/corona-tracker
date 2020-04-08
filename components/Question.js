@@ -17,11 +17,10 @@ const Question = () => {
               Question 1 of 13
           </Text>
           <Text style={styles.body}>
-              Do you have cough?
+              Do you have cough? Do you have cough? Do you have cough?
           </Text>
-          <View style={styles.btns}>
                 <TouchableOpacity 
-                    style={{...styles.btn, backgroundColor: '#E49008',}}
+                    style={{...styles.btn, backgroundColor: '#4B5EB2',}}
                     onPress={()=>{ }}
                 >
                     <Text style={styles.btnText}>
@@ -36,14 +35,12 @@ const Question = () => {
                         No
                     </Text>
                 </TouchableOpacity>
-          </View>
       </View>
   );
 };
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         padding: 25,
         borderRadius: 15,
         backgroundColor: '#E4E9F5',
@@ -63,25 +60,20 @@ const styles = StyleSheet.create({
         fontSize: 24,
         lineHeight: 28,
         textAlign: 'center',
-
+        marginBottom: 25,
         color: '#4B5EB2',
-    },
-    btns: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginTop: 25,
-        marginBottom: 13,
     },
     btn: {
         borderRadius: 5,
         backgroundColor: '#E49008',
         marginTop: 7,
         padding: 5,
-        width: 107
+        marginBottom: 13,
     },
     btnText: {
         color: '#fff',
         textAlign: 'center',
+        fontSize: 14,
     }
 });
 

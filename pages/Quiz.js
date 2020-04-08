@@ -17,9 +17,7 @@ const Quiz = () => {
     <SafeAreaView style={styles.container}>
       <TopNav />
       <View style={styles.scroll}>
-        <ScrollView style={styles.scrollContainer}>
-            <Question />
-        </ScrollView>
+          <Question />
       </View>
 
     </SafeAreaView>
@@ -30,15 +28,14 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#F9FAFF',
+      justifyContent: 'space-around'
     },
     scroll: {
       flex: 1,
       paddingTop: 25,
       paddingLeft: 25,
       paddingRight: 25,
-    },
-    scrollContainer: {
-      
+      justifyContent: 'space-around'
     },
   });
 
