@@ -2,11 +2,7 @@ import React from 'react';
 import {
     SafeAreaView,
     StyleSheet,
-    ScrollView,
     View,
-    Text,
-    Image,
-    StatusBar,
   } from 'react-native';
 import TopNav from '../components/TopNav';
 import Question from '../components/Questions';
