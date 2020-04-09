@@ -1,4 +1,6 @@
+import 'react-native-gesture-handler';
 import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
 import {
   StyleSheet,
   View,
@@ -11,13 +13,15 @@ import Quiz from './pages/Quiz';
 
 const App: () => React$Node = () => {
   return (
-    <View style={styles.container}>
-      {/* <Home /> */}
-      {/* <PreventionTips /> */}
-      {/* <Login /> */}
-      {/* <SignUp /> */}
-      <Quiz />
-    </View>
+    <NavigationContainer>
+      <View style={styles.container}>
+        {/* <Home /> */}
+        {/* <PreventionTips /> */}
+        {/* <Login /> */}
+        {/* <SignUp /> */}
+        <Quiz />
+      </View>
+    </NavigationContainer>
   );
 };
 
