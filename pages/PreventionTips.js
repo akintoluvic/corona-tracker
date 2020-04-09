@@ -16,7 +16,7 @@ import References from '../components/References';
 const PreventionTips = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <TopNav />
+      <TopNav title='Prevention Tips'/>
       <View style={styles.scroll}>
         <ScrollView style={styles.scrollContainer}>
             <PreventionHeader />

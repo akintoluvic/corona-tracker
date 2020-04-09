@@ -11,7 +11,7 @@ import Question from '../components/Questions';
 const Quiz = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <TopNav />
+      <TopNav title='Symptom Tracker'/>
       <View style={styles.scroll}>
           <Question />
       </View>

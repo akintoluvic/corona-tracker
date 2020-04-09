@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import PreventionTips from '../pages/PreventionTips';
 
-const TopNav = () => {
+const TopNav = ({ title }) => {
   return (
         <View style={styles.container}>
             <TouchableOpacity 
@@ -18,7 +18,7 @@ const TopNav = () => {
                 <Image source={require('../images/left.png')} />
             </TouchableOpacity> 
             <Text style={styles.title}>
-                Prevention Tips
+                { title }
             </Text> 
         </View> 
   );
