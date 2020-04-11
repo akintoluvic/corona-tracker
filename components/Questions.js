@@ -13,7 +13,7 @@ const Questions = () => {
               Question 1 of 13
           </Text>
           <Text style={styles.body}>
-              Do you have cough? Do you have cough? Do you have cough?
+              Do you have cough? Do you have cough?
           </Text>
                 <TouchableOpacity 
                     style={{...styles.btn, backgroundColor: '#4B5EB2',}}

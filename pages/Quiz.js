@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import {
     SafeAreaView,
     StyleSheet,
@@ -9,7 +9,12 @@ import { GlobalContext } from '../context/GlobalState';
 
 
 const Quiz = () => {
+  const [ questionNo, setQuestionNo ] = useState(0)
   const { questions } = useContext(GlobalContext);
+
+  const selectQuestion = () => {
+
+  }
 
   return (
     <SafeAreaView style={styles.container}>
