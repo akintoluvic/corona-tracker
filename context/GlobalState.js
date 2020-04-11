@@ -48,6 +48,12 @@ export const GlobalProvider = ({ children  }) => {
             payload: no
         });
     }
+    function resetQuestionNo(no) {
+        dispatch({
+            type: 'INCREMENT_QUESTION_NO',
+            payload: no
+        });
+    }
 
     function deleteOrderItem(no) {
         dispatch({
@@ -91,6 +97,7 @@ export const GlobalProvider = ({ children  }) => {
                 questions: state.questions,
                 questionNo: state.questionNo,
                 incrementQuestionNo,
+                resetQuestionNo,
 
                 items: state.items, 
                 

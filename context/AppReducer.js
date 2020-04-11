@@ -5,6 +5,11 @@ export default ( state, action ) => {
                 ...state,
                 questionNo: action.payload +1
             }
+        case 'RESET_QUESTION_NO':
+            return {
+                ...state,
+                questionNo: 0
+            }
 
         case 'DELETE_ORDER_ITEM':
             return {
