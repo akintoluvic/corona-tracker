@@ -4,11 +4,6 @@ import {
     StyleSheet,
     ScrollView,
     View,
-    Text,
-    Image,
-    StatusBar,
-    Button,
-
   } from 'react-native';
 import HomeHeader from '../components/HomeHeader';
 import TrackNow from '../components/TrackNow';
@@ -28,12 +23,9 @@ const Home = ({ navigation }) => {
             <Title title='Prevention, Tips and more' />
             <>
                 <Tip openFullTip={openTip} />
-                {/* <Tip />
-                <Tip />
-                <Tip />
-                <Tip />
-                <Tip /> */}
-                
+                <Tip openFullTip={openTip} />
+                <Tip openFullTip={openTip} />
+                <Tip openFullTip={openTip} />
             </>
           </View>
       </ScrollView>

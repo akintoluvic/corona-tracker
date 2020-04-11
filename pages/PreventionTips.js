@@ -5,7 +5,6 @@ import {
     ScrollView,
     View,
   } from 'react-native';
-  import TopNav from '../components/TopNav';
 import PreventionHeader from '../components/PreventionHeader';
 import PreventionBody from '../components/PreventionBody';
 import References from '../components/References';
@@ -13,7 +12,6 @@ import References from '../components/References';
 const PreventionTips = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <TopNav title='Prevention Tips'/>
       <View style={styles.scroll}>
         <ScrollView style={styles.scrollContainer}>
             <PreventionHeader />
