@@ -21,7 +21,6 @@ const App = () => {
         <Stack.Screen
           name="Home"
           component={Home}
-          // options={{title: ''}}
           options={{
             title: 'My home',
             headerStyle: {
@@ -33,10 +32,18 @@ const App = () => {
             },
           }}
         />
-        <Stack.Screen name="PreventionTips" component={PreventionTips} />
+        <Stack.Screen
+          name="PreventionTips" 
+          component={PreventionTips}
+          options={{title: 'Prevention Tips'}}
+        />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="SignUp" component={SignUp} />
-        <Stack.Screen name="Quiz" component={Quiz} />
+        <Stack.Screen 
+          name="Quiz" 
+          component={Quiz}
+          options={{title: 'Symptoms Quiz'}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
