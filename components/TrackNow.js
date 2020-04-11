@@ -4,11 +4,12 @@ import {
   View,
   Text,
   Image,
-  TouchableOpacity
+  TouchableOpacity,
 } from 'react-native';
 import Title from './Title'
+import Quiz from '../pages/Quiz';
 
-const TrackNow = () => {
+const TrackNow = ({ quiz }) => {
   return (
       <View style={{flex:1}}>
         <Title title='Symptoms Tracker' />
@@ -23,7 +24,7 @@ const TrackNow = () => {
                 </Text>
                 <TouchableOpacity 
                     style={styles.btn}
-                    onPress={()=>{ }}
+                    onPress={()=>quiz()}
                 >
                     <Text style={styles.btnText}>
                         Track now

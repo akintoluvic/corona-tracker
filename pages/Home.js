@@ -7,18 +7,21 @@ import {
     Text,
     Image,
     StatusBar,
+    Button,
+
   } from 'react-native';
 import HomeHeader from '../components/HomeHeader';
 import TrackNow from '../components/TrackNow';
 import Tips from '../components/Tips';
 
-const Home = () => {
+const Home = ({ navigation }) => {
+  const takeQuiz = () => navigation.navigate('Quiz');
   return (
     <SafeAreaView style={styles.home}>
       <HomeHeader />
       <View style={styles.scroll}>
       <ScrollView style={styles.scrollContainer}>
-          <TrackNow />
+          <TrackNow quiz={takeQuiz} />
           <Tips />
       </ScrollView>
       </View>
