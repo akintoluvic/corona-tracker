@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
     SafeAreaView,
     StyleSheet,
     View,
   } from 'react-native';
 import Question from '../components/Questions';
+import { GlobalContext } from '../context/GlobalState';
 
 
 const Quiz = () => {
+  const { questions } = useContext(GlobalContext);
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.scroll}>
