@@ -17,6 +17,7 @@ import Title from '../components/Title';
 
 const Home = ({ navigation }) => {
   const takeQuiz = () => navigation.navigate('Quiz');
+  const openTip = () => navigation.navigate('PreventionTips')
   return (
     <SafeAreaView style={styles.home}>
       <HomeHeader />
@@ -26,12 +27,12 @@ const Home = ({ navigation }) => {
           <View>
             <Title title='Prevention, Tips and more' />
             <>
+                <Tip openFullTip={openTip} />
+                {/* <Tip />
                 <Tip />
                 <Tip />
                 <Tip />
-                <Tip />
-                <Tip />
-                <Tip />
+                <Tip /> */}
                 
             </>
           </View>

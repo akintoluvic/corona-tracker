@@ -7,12 +7,12 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-const Tip = () => {
+const Tip = ({ openFullTip }) => {
   return (
       <View>
                 <TouchableOpacity 
                     style={styles.btn}
-                    onPress={()=>{ }}
+                    onPress={()=> openFullTip()}
                 >   
                     <Image source={require('../images/tip-image.png')} />
                     <View style={styles.contain}>
