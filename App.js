@@ -10,17 +10,34 @@ import PreventionTips from './pages/PreventionTips';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Quiz from './pages/Quiz';
+import {createStackNavigator} from '@react-navigation/stack';
+
+const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
   return (
     <NavigationContainer>
-      <View style={styles.container}>
-        {/* <Home /> */}
-        {/* <PreventionTips /> */}
-        {/* <Login /> */}
-        {/* <SignUp /> */}
-        <Quiz />
-      </View>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          // options={{title: ''}}
+          options={{
+            title: 'My home',
+            headerStyle: {
+              backgroundColor: '#f4511e',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen name="PreventionTips" component={PreventionTips} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="Quiz" component={Quiz} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
