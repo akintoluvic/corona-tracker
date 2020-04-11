@@ -25,7 +25,7 @@ const App: () => React$Node = () => {
           options={{
             title: 'My home',
             headerStyle: {
-              backgroundColor: '#f4511e',
+              backgroundColor: '#4B5EB2',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {

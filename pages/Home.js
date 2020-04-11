@@ -30,6 +30,7 @@ const Home = () => {
 const styles = StyleSheet.create({
     home: {
       flex: 1,
+      backgroundColor: '#4B5EB2',
     },
     scroll: {
       flex: 1,
