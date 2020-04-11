@@ -8,12 +8,14 @@ import {
 import { GlobalContext } from '../context/GlobalState';
 
 const Questions = () => {
-    const [ questionNo, setQuestionNo ] = useState(0);
-    const { questions } = useContext(GlobalContext);
-
-    const incrementQuestionNo = () => {
-        
-    }
+    // const [ questionNo, setQuestionNo ] = useState(0);
+    const { questions, questionNo, incrementQuestionNo } = useContext(GlobalContext);
+    console.log(questionNo)
+    // const incrementQuestionNo = () => {
+    //     setQuestionNo(questionNo => 
+    //         questionNo+1
+    //     )
+    // }
 
   return (
       <View style={styles.container} >
@@ -25,7 +27,7 @@ const Questions = () => {
           </Text>
                 <TouchableOpacity 
                     style={{...styles.btn, backgroundColor: '#4B5EB2',}}
-                    onPress={()=>{ }}
+                    onPress={()=>incrementQuestionNo(questionNo)}
                 >
                     <Text style={styles.btnText}>
                         Yes
@@ -33,7 +35,7 @@ const Questions = () => {
                 </TouchableOpacity>
                 <TouchableOpacity 
                     style={{...styles.btn, backgroundColor: '#E49008',}}
-                    onPress={()=>{ }}
+                    onPress={()=>incrementQuestionNo()}
                 >
                     <Text style={styles.btnText}>
                         No
@@ -59,7 +61,6 @@ const styles = StyleSheet.create({
         marginBottom: 20,
     },
     body: {
-
         fontFamily: 'Roboto',
         fontSize: 24,
         lineHeight: 28,

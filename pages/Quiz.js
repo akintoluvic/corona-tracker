@@ -10,16 +10,15 @@ import { GlobalContext } from '../context/GlobalState';
 
 
 const Quiz = () => {
-  const [ questionNo, setQuestionNo ] = useState(0)
-  const { questions } = useContext(GlobalContext);
-
+  const { questionNo } = useContext(GlobalContext);
+  console.log({questionNo})
   
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.scroll}>
-          { questionNo <= 12 ? <Question /> : <Text>Ade</Text>}
-          
+          {/* { questionNo <= 12 ? <Question /> : <Text>Ade</Text>} */}
+          <Question />
       </View>
 
     </SafeAreaView>

@@ -18,6 +18,8 @@ const initialState = {
         {no: 12, question: 'Do you have direct contact or is taking care of a positive COVID-19 PATIENT?',value: 3},
         {no: 13, question: 'Do you have cough?',value: 3},
     ],
+    // questionNo: {value: 0},
+    questionNo: 0,
     // result:
     orderItems: [],
     sales: [],
@@ -40,6 +42,13 @@ export const GlobalProvider = ({ children  }) => {
     const [ state, dispatch ] = useReducer(AppReducer, initialState);
 
     // Actions
+    function incrementQuestionNo(no) {
+        dispatch({
+            type: 'INCREMENT_QUESTION_NO',
+            payload: no
+        });
+    }
+
     function deleteOrderItem(no) {
         dispatch({
             type: 'DELETE_ORDER_ITEM',
@@ -80,6 +89,8 @@ export const GlobalProvider = ({ children  }) => {
         <GlobalContext.Provider
             value={{ 
                 questions: state.questions,
+                questionNo: state.questionNo,
+                incrementQuestionNo,
 
                 items: state.items, 
                 

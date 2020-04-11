@@ -1,5 +1,11 @@
 export default ( state, action ) => {
     switch(action.type) {
+        case 'INCREMENT_QUESTION_NO':
+            return {
+                ...state,
+                questionNo: action.payload +1
+            }
+
         case 'DELETE_ORDER_ITEM':
             return {
                 ...state,
