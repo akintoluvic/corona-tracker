@@ -3,6 +3,7 @@ import {
     SafeAreaView,
     StyleSheet,
     View,
+    Text,
   } from 'react-native';
 import Question from '../components/Questions';
 import { GlobalContext } from '../context/GlobalState';
@@ -12,14 +13,13 @@ const Quiz = () => {
   const [ questionNo, setQuestionNo ] = useState(0)
   const { questions } = useContext(GlobalContext);
 
-  const selectQuestion = () => {
-
-  }
+  
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.scroll}>
-          <Question />
+          { questionNo <= 12 ? <Question /> : <Text>Ade</Text>}
+          
       </View>
 
     </SafeAreaView>

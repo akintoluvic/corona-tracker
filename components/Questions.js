@@ -1,19 +1,27 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import {
   StyleSheet,
   View,
   Text,
   TouchableOpacity
 } from 'react-native';
+import { GlobalContext } from '../context/GlobalState';
 
 const Questions = () => {
+    const [ questionNo, setQuestionNo ] = useState(0);
+    const { questions } = useContext(GlobalContext);
+
+    const incrementQuestionNo = () => {
+        
+    }
+
   return (
       <View style={styles.container} >
           <Text style={styles.title}>
-              Question 1 of 13
+              Question {questionNo+1} of 13
           </Text>
           <Text style={styles.body}>
-              Do you have cough? Do you have cough?
+              {questions[questionNo].question}
           </Text>
                 <TouchableOpacity 
                     style={{...styles.btn, backgroundColor: '#4B5EB2',}}
