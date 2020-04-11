@@ -4,14 +4,12 @@ import {
     StyleSheet,
     View,
   } from 'react-native';
-import TopNav from '../components/TopNav';
 import Question from '../components/Questions';
 
 
 const Quiz = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <TopNav title='Symptom Tracker'/>
       <View style={styles.scroll}>
           <Question />
       </View>

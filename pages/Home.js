@@ -12,7 +12,8 @@ import {
   } from 'react-native';
 import HomeHeader from '../components/HomeHeader';
 import TrackNow from '../components/TrackNow';
-import Tips from '../components/Tips';
+import Tip from '../components/Tip';
+import Title from '../components/Title';
 
 const Home = ({ navigation }) => {
   const takeQuiz = () => navigation.navigate('Quiz');
@@ -22,7 +23,18 @@ const Home = ({ navigation }) => {
       <View style={styles.scroll}>
       <ScrollView style={styles.scrollContainer}>
           <TrackNow quiz={takeQuiz} />
-          <Tips />
+          <View>
+            <Title title='Prevention, Tips and more' />
+            <>
+                <Tip />
+                <Tip />
+                <Tip />
+                <Tip />
+                <Tip />
+                <Tip />
+                
+            </>
+          </View>
       </ScrollView>
       </View>
 

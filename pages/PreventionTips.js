@@ -4,9 +4,6 @@ import {
     StyleSheet,
     ScrollView,
     View,
-    Text,
-    Image,
-    StatusBar,
   } from 'react-native';
   import TopNav from '../components/TopNav';
 import PreventionHeader from '../components/PreventionHeader';

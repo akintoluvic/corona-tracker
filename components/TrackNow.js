@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import Title from './Title'
-import Quiz from '../pages/Quiz';
 
 const TrackNow = ({ quiz }) => {
   return (
