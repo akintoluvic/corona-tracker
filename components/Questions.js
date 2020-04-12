@@ -12,17 +12,23 @@ const Questions = () => {
     const { questions, questionNo, resetQuestionNo, incrementQuestionNo } = useContext(GlobalContext);
     console.log(questionNo)
     const scoreQuestion = () => {
-        incrementQuestionNo(questionNo);
-        questionNo === 13 ? resetQuestionNo(0): ''
+        
+        if (questionNo === 13) {
+            resetQuestionNo(0)
+        } else {
+            incrementQuestionNo(questionNo);
+        }
     }
 
   return (
       <View style={styles.container} >
           <Text style={styles.title}>
-              Question {questionNo+1} of 13
+              
+              {questionNo === 13 ? "" : `Question ${questionNo+1} of 13`}
           </Text>
           <Text style={styles.body}>
-              {questions[questionNo].question}
+              {/* {questions[questionNo].question} */}
+              {questionNo === 13 ? "I'm good" : questions[questionNo].question}
           </Text>
                 <TouchableOpacity 
                     style={{...styles.btn, backgroundColor: '#4B5EB2',}}

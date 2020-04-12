@@ -18,8 +18,31 @@ const initialState = {
         {no: 12, question: 'Do you have direct contact or is taking care of a positive COVID-19 PATIENT?',value: 3},
         {no: 13, question: 'Do you have cough?',value: 3},
     ],
-    // questionNo: {value: 0},
+    currentResult: [],
+    resultTemplate: [
+        {min: 0, max: 2, result: 'May be stress related observe'},
+        {min: 3, max: 5, result: 'Hydrate properly and proper personal hygiene. Observe an re-evaluate after two days'},
+        {min: 6, max: 12, result: 'Seek consultation with a doctor'},
+        {min: 12, max: 24, result: 'Call the DOH Hotline 02-8-651-7800'}
+    ],
     questionNo: 0,
+    tips: [
+        {
+            sn: 1, 
+            title: '', 
+            sourceAuthor: '', 
+            body: {
+                art1: '',
+                imageUrl: '',
+                art1: '',
+                art1: '',
+                art1: '',
+            }, 
+            references: [
+                '', ''
+            ]
+        }
+    ],
     // result:
     orderItems: [],
     sales: [],
