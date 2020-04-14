@@ -9,6 +9,7 @@ import { GlobalContext } from '../context/GlobalState';
 
 const Questions = () => {
     const [ currentResult, setCurrentResult ] = useState([]);
+    const [ result, setResult ] = useState([]);
     const { 
         questions, 
         questionNo, 
@@ -17,19 +18,17 @@ const Questions = () => {
         results, 
         urrentResult 
     } = useContext(GlobalContext);
-    
+
     console.log(currentResult.length, questionNo)
     const scoreQuestion = (val) => {
         
         if (currentResult.length === 13) {
             resetQuestionNo(0)
+            setResult([...result, currentResult])
+            setCurrentResult([])
         } else {
             incrementQuestionNo(questionNo);
-            setCurrentResult([...currentResult, {questionNo: val}]
-                // prevState => ([
-                //     ...prevState, {questionNo: val}
-                // ])
-            )
+            setCurrentResult([...currentResult, {questionNo: val}])
         }
     }
 

@@ -22,20 +22,20 @@ const App = () => {
         <Stack.Navigator initialRouteName="Login">
           <Stack.Screen name="Login" component={Login}
             options={{
-              topBar: {
-                visible: false,
-                height: 0,
+              // topBar: {
+              //   visible: false,
+              //   height: 0,
+              // },
+              
+              
+              title: '',
+              headerStyle: {
+                backgroundColor: '#4B5EB2',
               },
-              
-              
-              // title: '',
-              // headerStyle: {
-              //   backgroundColor: '#4B5EB2',
-              // },
-              // headerTintColor: '#fff',
-              // headerTitleStyle: {
-              //   fontWeight: 'bold',
-              // },
+              headerTintColor: '#fff',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+              },
             }}
           />
           <Stack.Screen
