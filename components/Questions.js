@@ -9,18 +9,26 @@ import { GlobalContext } from '../context/GlobalState';
 
 const Questions = () => {
     const [ currentResult, setCurrentResult ] = useState([]);
-    const { questions, questionNo, resetQuestionNo, incrementQuestionNo, urrentResult } = useContext(GlobalContext);
-    console.log(currentResult.lenght)
+    const { 
+        questions, 
+        questionNo, 
+        resetQuestionNo, 
+        incrementQuestionNo, 
+        results, 
+        urrentResult 
+    } = useContext(GlobalContext);
+    
+    console.log(currentResult.length, questionNo)
     const scoreQuestion = (val) => {
         
-        if (currentResult.lenght === 13) {
+        if (currentResult.length === 13) {
             resetQuestionNo(0)
         } else {
             incrementQuestionNo(questionNo);
-            setCurrentResult(
-                prevState => ([
-                    ...prevState, {questionNo: val}
-                ])
+            setCurrentResult([...currentResult, {questionNo: val}]
+                // prevState => ([
+                //     ...prevState, {questionNo: val}
+                // ])
             )
         }
     }
@@ -29,13 +37,13 @@ const Questions = () => {
       <View style={styles.container} >
           <Text style={styles.title}>
               
-              {currentResult.lenght === 13 ? "" : `Question ${questionNo+1} of 13`}
+              {currentResult.length === 13 ? "" : `Question ${questionNo+1} of 13`}
           </Text>
           <Text style={styles.body}>
               {/* {questions[questionNo].question} */}
-              {currentResult.lenght === 13 ? "I'm good" : questions[questionNo].question}
+              {currentResult.length === 13 ? "I'm good" : questions[questionNo].question}
           </Text>
-            { currentResult.lenght !== 13 ? 
+            { currentResult.length !== 13 ? 
                 <View>
                     <TouchableOpacity 
                         style={{...styles.btn, backgroundColor: '#4B5EB2',}}

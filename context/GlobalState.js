@@ -18,6 +18,7 @@ const initialState = {
         {no: 12, question: 'Do you have direct contact or is taking care of a positive COVID-19 PATIENT?',value: 3},
         {no: 13, question: 'Do you have cough?',value: 3},
     ],
+    results: [],
     currentResult: [],
     resultTemplate: [
         {min: 0, max: 2, result: 'May be stress related observe'},
