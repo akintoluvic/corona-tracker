@@ -11,10 +11,10 @@ const Questions = () => {
     // const [ questionNo, setQuestionNo ] = useState(0);
     const { questions, questionNo, resetQuestionNo, incrementQuestionNo } = useContext(GlobalContext);
     console.log(questionNo)
-    const scoreQuestion = () => {
+    const scoreQuestion = (val) => {
         
         if (questionNo === 13) {
-            resetQuestionNo(0)
+            return resetQuestionNo(0)
         } else {
             incrementQuestionNo(questionNo);
         }
@@ -32,7 +32,7 @@ const Questions = () => {
           </Text>
                 <TouchableOpacity 
                     style={{...styles.btn, backgroundColor: '#4B5EB2',}}
-                    onPress={()=>scoreQuestion()}
+                    onPress={()=>scoreQuestion(questions[questionNo].value)}
                 >
                     <Text style={styles.btnText}>
                         Yes
@@ -40,7 +40,7 @@ const Questions = () => {
                 </TouchableOpacity>
                 <TouchableOpacity 
                     style={{...styles.btn, backgroundColor: '#E49008',}}
-                    onPress={()=>scoreQuestion()}
+                    onPress={()=>scoreQuestion(0)}
                 >
                     <Text style={styles.btnText}>
                         No

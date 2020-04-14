@@ -16,7 +16,7 @@ import PreventionHeader from '../components/PreventionHeader';
 import PreventionBody from '../components/PreventionBody';
 import References from '../components/References';
 
-const SignUp = () => {
+const SignUp = ({ navigation }) => {
     const [ firstname, setFirstname ] = useState('');
     const [ lastname, setLastname ] = useState('');
     const [ user, setUser ] = useState('');
@@ -60,14 +60,16 @@ const SignUp = () => {
               />
               <TouchableOpacity 
                 style={styles.btn}
-                onPress={()=>Alert.alert( firstname, lastname)}
+                onPress={()=> navigation.navigate('Home')}
               >
                 <Text style={styles.btnText}>
                     SignUp
                 </Text>
               </TouchableOpacity>
-              <Text style={{...styles.text, ...styles.dark}}>
-                  New User? Sign Up here
+              <Text style={{...styles.text, ...styles.dark}}
+                onPress={()=> navigation.navigate('Login')}
+              >
+                  Login instead
               </Text>
           </View>
           
