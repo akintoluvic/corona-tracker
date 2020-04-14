@@ -10,14 +10,18 @@ import { GlobalContext } from '../context/GlobalState';
 const Questions = () => {
     const [ currentResult, setCurrentResult ] = useState([]);
     const { questions, questionNo, resetQuestionNo, incrementQuestionNo, urrentResult } = useContext(GlobalContext);
-    console.log(questionNo)
+    console.log(currentResult.lenght)
     const scoreQuestion = (val) => {
         
-        if (questionNo === 13) {
+        if (currentResult.lenght === 13) {
             resetQuestionNo(0)
-            console.log(currentResult)
         } else {
             incrementQuestionNo(questionNo);
+            setCurrentResult(
+                prevState => ([
+                    ...prevState, {questionNo: val}
+                ])
+            )
         }
     }
 
@@ -25,13 +29,13 @@ const Questions = () => {
       <View style={styles.container} >
           <Text style={styles.title}>
               
-              {questionNo === 13 ? "" : `Question ${questionNo+1} of 13`}
+              {currentResult.lenght === 13 ? "" : `Question ${questionNo+1} of 13`}
           </Text>
           <Text style={styles.body}>
               {/* {questions[questionNo].question} */}
-              {questionNo === 13 ? "I'm good" : questions[questionNo].question}
+              {currentResult.lenght === 13 ? "I'm good" : questions[questionNo].question}
           </Text>
-            { currentResult.lenght === 13 ? 
+            { currentResult.lenght !== 13 ? 
                 <View>
                     <TouchableOpacity 
                         style={{...styles.btn, backgroundColor: '#4B5EB2',}}
@@ -53,7 +57,7 @@ const Questions = () => {
                 <View>
                     <TouchableOpacity 
                         style={{...styles.btn, backgroundColor: '#4B5EB2',}}
-                        onPress={()=>scoreQuestion(questions[questionNo].value)}
+                        onPress={()=>{}}
                     >
                         <Text style={styles.btnText}>
                             Guidelines on isolation
@@ -61,7 +65,7 @@ const Questions = () => {
                     </TouchableOpacity>
                     <TouchableOpacity 
                         style={{...styles.btn, backgroundColor: '#E49008',}}
-                        onPress={()=>scoreQuestion(0)}
+                        onPress={()=>{}}
                     >
                         <Text style={styles.btnText}>
                             Return to Home

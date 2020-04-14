@@ -13,14 +13,7 @@ import Quiz from './pages/Quiz';
 import {createStackNavigator} from '@react-navigation/stack';
 import { GlobalProvider } from './context/GlobalState';
 
-const Stack = createStackNavigator({
-  First: {
-    screen: Login},},
-    {navigationOptions: {
-                header: null,
-              },
-  
-});
+const Stack = createStackNavigator();
 
 const App = () => {
   return (

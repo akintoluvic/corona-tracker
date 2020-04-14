@@ -11,8 +11,6 @@ import { GlobalContext } from '../context/GlobalState';
 
 const Quiz = () => {
   const { questionNo } = useContext(GlobalContext);
-  console.log({questionNo})
-  
 
   return (
     <SafeAreaView style={styles.container}>
