@@ -13,7 +13,14 @@ import Quiz from './pages/Quiz';
 import {createStackNavigator} from '@react-navigation/stack';
 import { GlobalProvider } from './context/GlobalState';
 
-const Stack = createStackNavigator();
+const Stack = createStackNavigator({
+  First: {
+    screen: Login},},
+    {navigationOptions: {
+                header: null,
+              },
+  
+});
 
 const App = () => {
   return (
@@ -22,14 +29,20 @@ const App = () => {
         <Stack.Navigator initialRouteName="Login">
           <Stack.Screen name="Login" component={Login}
             options={{
-              title: '',
-              headerStyle: {
-                backgroundColor: '#4B5EB2',
+              topBar: {
+                visible: false,
+                height: 0,
               },
-              headerTintColor: '#fff',
-              headerTitleStyle: {
-                fontWeight: 'bold',
-              },
+              
+              
+              // title: '',
+              // headerStyle: {
+              //   backgroundColor: '#4B5EB2',
+              // },
+              // headerTintColor: '#fff',
+              // headerTitleStyle: {
+              //   fontWeight: 'bold',
+              // },
             }}
           />
           <Stack.Screen

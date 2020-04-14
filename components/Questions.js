@@ -8,13 +8,14 @@ import {
 import { GlobalContext } from '../context/GlobalState';
 
 const Questions = () => {
-    // const [ questionNo, setQuestionNo ] = useState(0);
-    const { questions, questionNo, resetQuestionNo, incrementQuestionNo } = useContext(GlobalContext);
+    const [ currentResult, setCurrentResult ] = useState([]);
+    const { questions, questionNo, resetQuestionNo, incrementQuestionNo, urrentResult } = useContext(GlobalContext);
     console.log(questionNo)
     const scoreQuestion = (val) => {
         
         if (questionNo === 13) {
-            return resetQuestionNo(0)
+            resetQuestionNo(0)
+            console.log(currentResult)
         } else {
             incrementQuestionNo(questionNo);
         }
@@ -30,22 +31,44 @@ const Questions = () => {
               {/* {questions[questionNo].question} */}
               {questionNo === 13 ? "I'm good" : questions[questionNo].question}
           </Text>
-                <TouchableOpacity 
-                    style={{...styles.btn, backgroundColor: '#4B5EB2',}}
-                    onPress={()=>scoreQuestion(questions[questionNo].value)}
-                >
-                    <Text style={styles.btnText}>
-                        Yes
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity 
-                    style={{...styles.btn, backgroundColor: '#E49008',}}
-                    onPress={()=>scoreQuestion(0)}
-                >
-                    <Text style={styles.btnText}>
-                        No
-                    </Text>
-                </TouchableOpacity>
+            { currentResult.lenght === 13 ? 
+                <View>
+                    <TouchableOpacity 
+                        style={{...styles.btn, backgroundColor: '#4B5EB2',}}
+                        onPress={()=>scoreQuestion(questions[questionNo].value)}
+                    >
+                        <Text style={styles.btnText}>
+                            Yes
+                        </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity 
+                        style={{...styles.btn, backgroundColor: '#E49008',}}
+                        onPress={()=>scoreQuestion(0)}
+                    >
+                        <Text style={styles.btnText}>
+                            No
+                        </Text>
+                    </TouchableOpacity>
+                </View> :
+                <View>
+                    <TouchableOpacity 
+                        style={{...styles.btn, backgroundColor: '#4B5EB2',}}
+                        onPress={()=>scoreQuestion(questions[questionNo].value)}
+                    >
+                        <Text style={styles.btnText}>
+                            Guidelines on isolation
+                        </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity 
+                        style={{...styles.btn, backgroundColor: '#E49008',}}
+                        onPress={()=>scoreQuestion(0)}
+                    >
+                        <Text style={styles.btnText}>
+                            Return to Home
+                        </Text>
+                    </TouchableOpacity>
+                </View> }
+
       </View>
   );
 };
