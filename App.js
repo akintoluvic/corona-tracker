@@ -19,7 +19,19 @@ const App = () => {
   return (
     <GlobalProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Home">
+        <Stack.Navigator initialRouteName="Login">
+          <Stack.Screen name="Login" component={Login}
+            options={{
+              title: '',
+              headerStyle: {
+                backgroundColor: '#4B5EB2',
+              },
+              headerTintColor: '#fff',
+              headerTitleStyle: {
+                fontWeight: 'bold',
+              },
+            }}
+          />
           <Stack.Screen
             name="Home"
             component={Home}
@@ -39,7 +51,7 @@ const App = () => {
             component={PreventionTips}
             options={{title: 'Prevention Tips'}}
           />
-          <Stack.Screen name="Login" component={Login} />
+          
           <Stack.Screen name="SignUp" component={SignUp} />
           <Stack.Screen 
             name="Quiz" 
