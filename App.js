@@ -16,7 +16,8 @@ import { GlobalProvider } from './context/GlobalState';
 const Stack = createStackNavigator();
 
 const App = () => {
-  const [ userToken, setUserToken ] = useState(null);
+
+  const [ userToken, setUserToken ] = useState(true); // null or token
   const [ isLoading, setIsLoading ] = useState(false);
   const [ isSignout, setIsSignout ] = useState(false);
   
@@ -28,7 +29,7 @@ const App = () => {
     <GlobalProvider>
       <NavigationContainer>
         <Stack.Navigator>
-          {userToken == null ? (
+          {userToken == false ? (
             // No token found, user isn't signed in
             <>
               <Stack.Screen name="Login" component={Login}
@@ -85,11 +86,13 @@ const App = () => {
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#4B5EB2',
-    flex: 1,
-  },
-});
 
+
+// const Screens = () => {
+//   return (
+//     <GlobalProvider>
+//       <App />
+//     </GlobalProvider>
+//   )
+// }
 export default App;

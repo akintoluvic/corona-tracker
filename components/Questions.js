@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import {
   StyleSheet,
   View,
@@ -16,10 +16,11 @@ const Questions = () => {
         resetQuestionNo, 
         incrementQuestionNo, 
         results, 
-        urrentResult 
+        urrentResult,
     } = useContext(GlobalContext);
 
     console.log(currentResult.length, questionNo)
+    
     const scoreQuestion = (val) => {
         
         if (currentResult.length === 13) {
@@ -31,6 +32,7 @@ const Questions = () => {
             setCurrentResult([...currentResult, {questionNo: val}])
         }
     }
+
 
   return (
       <View style={styles.container} >

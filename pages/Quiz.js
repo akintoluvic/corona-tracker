@@ -10,7 +10,13 @@ import { GlobalContext } from '../context/GlobalState';
 
 
 const Quiz = () => {
-  const { questionNo } = useContext(GlobalContext);
+  const { questionNo, getQuestions } = useContext(GlobalContext);
+
+  useEffect(() => {
+      getQuestions()
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
 
   return (
     <SafeAreaView style={styles.container}>

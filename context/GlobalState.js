@@ -4,6 +4,7 @@ import axios from 'axios';
 
 // Initial State
 const initialState = {
+
     questions: [
         { no: 1, question: 'Do you have cough?', value: 1 },
         { no: 2, question: 'Do you have colds?', value: 1 },
@@ -19,6 +20,7 @@ const initialState = {
         { no: 12, question: 'Do you have direct contact or is taking care of a positive COVID-19 PATIENT?', value: 3 },
         { no: 13, question: 'Do you have cough?', value: 3 },
     ],
+    
     results: [],
     currentResult: [],
     resultTemplate: [
@@ -46,17 +48,6 @@ const initialState = {
         }
     ],
     // result:
-    orderItems: [],
-    sales: [],
-    items: [
-        { item: "Rice", price: 532, id: 152 },
-        { item: "Copa-rice", price: 232, id: 1222 },
-        { item: "Meat", price: 432, id: 121 },
-        { item: "Chickee", price: 332, id: 122 }
-    ],
-    goods: [],
-    stock: [],
-    priceList: [],
 }
 
 // Create Context
@@ -80,33 +71,21 @@ export const GlobalProvider = ({ children }) => {
             payload: no
         });
     }
-    async function loginUser() {
-        try {
-            const res = await axios.post(`${baseUrl}/login`);
-            dispatch({
-                type: 'GET_TRANSACTION',
-                payload: res.data.data
-            });
-        } catch (err) {
-            dispatch({
-                type: 'TRANSACTION_ERROR',
-                payload: err.res.data.error,
-            });
-        }
-    }
     async function getQuestions() {
-        try {
-            const res = await axios.get(`${baseUrl}/questions`);
-            dispatch({
-                type: 'GET_TRANSACTION',
-                payload: res.data.data
-            });
-        } catch (err) {
-            dispatch({
-                type: 'TRANSACTION_ERROR',
-                payload: err.res.data.error,
-            });
-        }
+        console.log('questions requested');
+        // try {
+        //     const res = await axios.get(`${baseUrl}/questions`);
+        //     console.log(res);
+        //     // dispatch({
+        //     //     type: 'GET_TRANSACTION',
+        //     //     payload: res.data.data
+        //     // });
+        // } catch (err) {
+        //     dispatch({
+        //         type: 'TRANSACTION_ERROR',
+        //         payload: err.res.data.error,
+        //     });
+        // }
 
         // await axios.get(`${baseUrl}/questions`)
         //     .then(res =>
@@ -138,23 +117,24 @@ export const GlobalProvider = ({ children }) => {
 
     }
     async function loginUser(loginDetails) {
-        const config = {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        }
-        try {
-            const res = await axios.post(`${baseUrl}/login`, loginDetails, config);
-            dispatch({
-                type: 'ADD_TRANSACTION',
-                payload: res.data.data
-            });
-        } catch (err) {
-            dispatch({
-                type: 'TRANSACTION_ERROR',
-                payload: err.res.data.error,
-            });
-        }
+        console.log(loginDetails);
+        // const config = {
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     }
+        // }
+        // try {
+        //     const res = await axios.post(`${baseUrl}/login`, loginDetails, config);
+        //     dispatch({
+        //         type: 'ADD_TRANSACTION',
+        //         payload: res.data.data
+        //     });
+        // } catch (err) {
+        //     dispatch({
+        //         type: 'TRANSACTION_ERROR',
+        //         payload: err.res.data.error,
+        //     });
+        // }
 
     }
     async function registerUser(registerDetails) {
@@ -184,10 +164,14 @@ export const GlobalProvider = ({ children }) => {
     return (
         <GlobalContext.Provider
             value={{
+
                 questions: state.questions,
                 questionNo: state.questionNo,
+
                 incrementQuestionNo,
                 resetQuestionNo,
+
+                loginUser,
 
             }}
         >
