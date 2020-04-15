@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // Initial State
 const initialState = {
-    userToken: false,
+    userToken: true,
     isLoading: false,
     isSignout: false,
     questions: [
@@ -69,7 +69,7 @@ export const GlobalProvider = ({ children }) => {
     }
     function resetQuestionNo(no) {
         dispatch({
-            type: 'INCREMENT_QUESTION_NO',
+            type: 'RESET_QUESTION_NO',
             payload: no
         });
     }
@@ -79,12 +79,12 @@ export const GlobalProvider = ({ children }) => {
         await axios.get(`${baseUrl}/questions`)
             .then(res => console.log(res.data)
                 // dispatch({
-                //     type: 'ADD_QUESTIONS',
+                //     type: 'GET_QUESTIONS',
                 //     payload: res.data.questions
                 // })
             ).catch(err => console.log(err)
                 // dispatch({
-                //     type: 'TRANSACTION_ERROR',
+                //     type: 'GET_QUESTIONS_ERROR',
                 //     payload: err,
                 // })
 
@@ -101,12 +101,12 @@ export const GlobalProvider = ({ children }) => {
         await axios.post(`${baseUrl}/login`, loginDetails, config)
             .then(res =>
                 dispatch({
-                    type: 'ADD_TRANSACTION',
+                    type: 'LOGIN_USER',
                     payload: res.data
                 })
             ).catch(err =>
                 dispatch({
-                    type: 'TRANSACTION_ERROR',
+                    type: 'LOGIN_USER_ERROR',
                     payload: err,
                 })
 
@@ -123,12 +123,12 @@ export const GlobalProvider = ({ children }) => {
         await axios.post(`${baseUrl}/register`, registerDetails, config)
             .then(res =>
                 dispatch({
-                    type: 'ADD_TRANSACTION',
+                    type: 'REGISTER_USER',
                     payload: res.data
                 })
             ).catch(err =>
                 dispatch({
-                    type: 'TRANSACTION_ERROR',
+                    type: 'REGISTER_USER_ERROR',
                     payload: err,
                 })
 

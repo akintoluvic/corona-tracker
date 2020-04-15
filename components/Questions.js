@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import { GlobalContext } from '../context/GlobalState';
 
-const Questions = () => {
+const Questions = ({ navigation }) => {
     const [ currentResult, setCurrentResult ] = useState([]);
     const [ result, setResult ] = useState([]);
     const { 
@@ -26,6 +26,7 @@ const Questions = () => {
         if (currentResult.length === 13) {
             resetQuestionNo(0)
             setResult([...result, currentResult])
+            console.log(result)
             setCurrentResult([])
         } else {
             incrementQuestionNo(questionNo);
@@ -66,7 +67,7 @@ const Questions = () => {
                 <View>
                     <TouchableOpacity 
                         style={{...styles.btn, backgroundColor: '#4B5EB2',}}
-                        onPress={()=>{}}
+                        onPress={()=> navigation.navigate('Home')}
                     >
                         <Text style={styles.btnText}>
                             Guidelines on isolation
@@ -74,7 +75,7 @@ const Questions = () => {
                     </TouchableOpacity>
                     <TouchableOpacity 
                         style={{...styles.btn, backgroundColor: '#E49008',}}
-                        onPress={()=>{}}
+                        onPress={()=> navigation.navigate('PreventionTips')}
                     >
                         <Text style={styles.btnText}>
                             Return to Home
