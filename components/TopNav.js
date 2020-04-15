@@ -1,27 +1,27 @@
 import React from 'react';
 import {
-  StyleSheet,
-  View,
-  Text,
-  Image,
-  TouchableOpacity
+    StyleSheet,
+    View,
+    Text,
+    Image,
+    TouchableOpacity
 } from 'react-native';
 import PreventionTips from '../pages/PreventionTips';
 
 const TopNav = ({ title }) => {
-  return (
+    return (
         <View style={styles.container}>
-            <TouchableOpacity 
+            <TouchableOpacity
                 style={styles.btn}
-                onPress={()=>{ }}
+                onPress={() => { }}
             >
                 <Image source={require('../images/left.png')} />
-            </TouchableOpacity> 
+            </TouchableOpacity>
             <Text style={styles.title}>
-                { title }
-            </Text> 
-        </View> 
-  );
+                {title}
+            </Text>
+        </View>
+    );
 };
 
 const styles = StyleSheet.create({

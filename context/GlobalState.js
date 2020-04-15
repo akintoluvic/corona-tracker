@@ -73,33 +73,20 @@ export const GlobalProvider = ({ children }) => {
     }
     async function getQuestions() {
         console.log('questions requested');
-        // try {
-        //     const res = await axios.get(`${baseUrl}/questions`);
-        //     console.log(res);
-        //     // dispatch({
-        //     //     type: 'GET_TRANSACTION',
-        //     //     payload: res.data.data
-        //     // });
-        // } catch (err) {
-        //     dispatch({
-        //         type: 'TRANSACTION_ERROR',
-        //         payload: err.res.data.error,
-        //     });
-        // }
 
-        // await axios.get(`${baseUrl}/questions`)
-        //     .then(res =>
-        //         dispatch({
-        //             type: 'ADD_TRANSACTION',
-        //             payload: res.json()
-        //         })
-        //     ).catch(err =>
-        //         dispatch({
-        //             type: 'TRANSACTION_ERROR',
-        //             payload: err.res.data.error,
-        //         })
+        await axios.get(`${baseUrl}/questions`)
+            .then(res => console.log(res.data)
+                // dispatch({
+                //     type: 'ADD_QUESTIONS',
+                //     payload: res.data.questions
+                // })
+            ).catch(err => console.log(err)
+                // dispatch({
+                //     type: 'TRANSACTION_ERROR',
+                //     payload: err,
+                // })
 
-        //     )
+            )
     }
     async function deleteTransaction(id) {
         try {
@@ -148,12 +135,12 @@ export const GlobalProvider = ({ children }) => {
             .then(res =>
                 dispatch({
                     type: 'ADD_TRANSACTION',
-                    payload: res.json()
+                    payload: res.data
                 })
             ).catch(err =>
                 dispatch({
                     type: 'TRANSACTION_ERROR',
-                    payload: err.res.data.error,
+                    payload: err,
                 })
 
             )
@@ -170,6 +157,7 @@ export const GlobalProvider = ({ children }) => {
 
                 incrementQuestionNo,
                 resetQuestionNo,
+                getQuestions,
 
                 loginUser,
 
