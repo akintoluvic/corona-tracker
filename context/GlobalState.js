@@ -68,6 +68,7 @@ export const GlobalProvider = ({ children }) => {
         });
     }
     function resetQuestionNo(no) {
+        console.log(no);
         dispatch({
             type: 'RESET_QUESTION_NO',
             payload: no
@@ -135,6 +136,28 @@ export const GlobalProvider = ({ children }) => {
 
             )
     }
+    async function postSymptoms(symptoms) {
+        console.log(symptoms);
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        await axios.post(`${baseUrl}/register`, symptoms, config)
+            .then(res =>
+                dispatch({
+                    type: 'POST_SYMPTOMS',
+                    payload: res.data
+                })
+            ).catch(err =>
+                dispatch({
+                    type: 'POST_SYMPTOMS_ERROR',
+                    payload: err,
+                })
+
+            )
+    }
 
 
     return (
@@ -150,6 +173,7 @@ export const GlobalProvider = ({ children }) => {
                 incrementQuestionNo,
                 resetQuestionNo,
                 getQuestions,
+                postSymptoms,
 
                 loginUser,
                 registerUser,

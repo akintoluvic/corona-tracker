@@ -30,7 +30,7 @@ const Login = ({ navigation }) => {
       </View>
       <View style={styles.scrol}>
           <Text style={{...styles.text, ...styles.white}}>
-            User  Registration
+            User Login
           </Text>
           <View style={styles.form}>
               <TextInput

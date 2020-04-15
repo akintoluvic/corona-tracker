@@ -8,7 +8,7 @@ export default ( state, action ) => {
         case 'RESET_QUESTION_NO':
             return {
                 ...state,
-                questionNo: 0
+                questionNo: action.payload
             }
 
         case 'DELETE_ORDER_ITEM':

@@ -5,6 +5,7 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
+import SplashScreen from './pages/SplashScreen';
 import Home from './pages/Home';
 import PreventionTips from './pages/PreventionTips';
 import Login from './pages/Login';
