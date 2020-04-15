@@ -90,40 +90,27 @@ export const GlobalProvider = ({ children }) => {
 
             )
     }
-    async function deleteTransaction(id) {
-        try {
-            await axios.delete(`${baseUrl}/${id}`);
-            dispatch({
-                type: 'DELETE_TRANSACTION',
-                payload: id
-            });
-        } catch (err) {
-            dispatch({
-                type: 'TRANSACTION_ERROR',
-                payload: err.res.data.error,
-            });
-        }
-
-    }
     async function loginUser(loginDetails) {
         console.log(loginDetails);
-        // const config = {
-        //     headers: {
-        //         'Content-Type': 'application/json'
-        //     }
-        // }
-        // try {
-        //     const res = await axios.post(`${baseUrl}/login`, loginDetails, config);
-        //     dispatch({
-        //         type: 'ADD_TRANSACTION',
-        //         payload: res.data.data
-        //     });
-        // } catch (err) {
-        //     dispatch({
-        //         type: 'TRANSACTION_ERROR',
-        //         payload: err.res.data.error,
-        //     });
-        // }
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+
+        await axios.post(`${baseUrl}/login`, loginDetails, config)
+            .then(res =>
+                dispatch({
+                    type: 'ADD_TRANSACTION',
+                    payload: res.data
+                })
+            ).catch(err =>
+                dispatch({
+                    type: 'TRANSACTION_ERROR',
+                    payload: err,
+                })
+
+            )
 
     }
     async function registerUser(registerDetails) {
@@ -146,7 +133,6 @@ export const GlobalProvider = ({ children }) => {
                 })
 
             )
-
     }
 
 
@@ -165,6 +151,7 @@ export const GlobalProvider = ({ children }) => {
                 getQuestions,
 
                 loginUser,
+                registerUser,
 
             }}
         >

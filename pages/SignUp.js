@@ -11,10 +11,7 @@ import {
     StatusBar,
     Alert,
   } from 'react-native';
-  import TopNav from '../components/TopNav';
-import PreventionHeader from '../components/PreventionHeader';
-import PreventionBody from '../components/PreventionBody';
-import References from '../components/References';
+import { GlobalContext } from '../context/GlobalState';
 
 const SignUp = ({ navigation }) => {
     const [ firstname, setFirstname ] = useState('');
@@ -22,6 +19,8 @@ const SignUp = ({ navigation }) => {
     const [ user, setUser ] = useState('');
     const [ password, setPassword ] = useState('');
     const [ confirmPassword, setConfirmPassword ] = useState('');
+
+    const { registerUser } = useContext(GlobalContext);
 
   return (
     <ScrollView style={styles.container}>
