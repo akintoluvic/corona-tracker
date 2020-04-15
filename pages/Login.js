@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {
     SafeAreaView,
     StyleSheet,
@@ -45,14 +45,14 @@ const Login = ({ navigation }) => {
               />
               <TouchableOpacity 
                 style={styles.btn}
-                onPress={()=> navigation.navigate('Home')}
+                onPress={()=> userLogin}
               >
                 <Text style={styles.btnText}>
                     LOGIN
                 </Text>
               </TouchableOpacity>
               <Text style={{...styles.text, ...styles.dark}}
-                onPress={()=> userLogin}
+                onPress={()=> navigation.navigate('SignUp')}
               >
                   New User? Sign Up here
               </Text>

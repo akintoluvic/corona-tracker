@@ -4,7 +4,9 @@ import axios from 'axios';
 
 // Initial State
 const initialState = {
-
+    userToken: false,
+    isLoading: false,
+    isSignout: false,
     questions: [
         { no: 1, question: 'Do you have cough?', value: 1 },
         { no: 2, question: 'Do you have colds?', value: 1 },
@@ -151,6 +153,9 @@ export const GlobalProvider = ({ children }) => {
     return (
         <GlobalContext.Provider
             value={{
+                userToken: state.userToken,
+                isLoading: state.isLoading,
+                isSignout: state.isSignout,
 
                 questions: state.questions,
                 questionNo: state.questionNo,

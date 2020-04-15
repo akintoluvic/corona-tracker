@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {
   StyleSheet,
@@ -10,16 +10,22 @@ import PreventionTips from './pages/PreventionTips';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Quiz from './pages/Quiz';
-import {createStackNavigator} from '@react-navigation/stack';
 import { GlobalProvider } from './context/GlobalState';
+import {createStackNavigator} from '@react-navigation/stack';
+import { GlobalContext } from './context/GlobalState';
+
 
 const Stack = createStackNavigator();
 
 const App = () => {
 
-  const [ userToken, setUserToken ] = useState(true); // null or token
-  const [ isLoading, setIsLoading ] = useState(false);
-  const [ isSignout, setIsSignout ] = useState(false);
+  // const [ userToken, setUserToken ] = useState(true); // null or token
+  // const [ isLoading, setIsLoading ] = useState(false);
+  // const [ isSignout, setIsSignout ] = useState(false);
+  
+ 
+
+  const { userToken, isSignout, isLoading } = useContext(GlobalContext);
   
   if (isLoading) {
     // We haven't finished checking for the token yet
