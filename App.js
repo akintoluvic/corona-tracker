@@ -42,18 +42,28 @@ const App = () => {
                 options={{
                   title: '',
                   headerStyle: {
-                    backgroundColor: '#4B5EB2',
-                  },
-                  headerTintColor: '#fff',
-                  headerTitleStyle: {
-                    fontWeight: 'bold',
+                    elevation: 0,
+                    shadowOpacity: 0,
+                    height: 0,
                   },
                   // When logging out, a pop animation feels intuitive
                   // You can remove this if you want the default 'push' animation
                   animationTypeForReplace: isSignout ? 'pop' : 'push',
                 }}
               />
-              <Stack.Screen name="SignUp" component={SignUp} />
+              <Stack.Screen name="SignUp" component={SignUp} 
+                options={{
+                  title: '',
+                  headerStyle: {
+                    elevation: 0,
+                    shadowOpacity: 0,
+                    height: 0,
+                  },
+                  // When logging out, a pop animation feels intuitive
+                  // You can remove this if you want the default 'push' animation
+                  animationTypeForReplace: isSignout ? 'pop' : 'push',
+                }}
+              />
             </>
           ) : (
             // User is signed in
@@ -62,13 +72,12 @@ const App = () => {
                 name="Home"
                 component={Home}
                 options={{
-                  title: 'My home',
+                  title: '',
                   headerStyle: {
                     backgroundColor: '#4B5EB2',
-                  },
-                  headerTintColor: '#fff',
-                  headerTitleStyle: {
-                    fontWeight: 'bold',
+                    elevation: 0,
+                    shadowOpacity: 0,
+                    height: 0,
                   },
                 }}
               />
@@ -92,13 +101,4 @@ const App = () => {
   );
 };
 
-
-
-// const Screens = () => {
-//   return (
-//     <GlobalProvider>
-//       <App />
-//     </GlobalProvider>
-//   )
-// }
 export default App;

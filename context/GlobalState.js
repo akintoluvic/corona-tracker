@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // Initial State
 const initialState = {
-    userToken: true,
+    userToken: false,
     isLoading: false,
     isSignout: false,
     questions: [
@@ -114,6 +114,7 @@ export const GlobalProvider = ({ children }) => {
 
     }
     async function registerUser(registerDetails) {
+        console.log(registerDetails);
         const config = {
             headers: {
                 'Content-Type': 'application/json'
