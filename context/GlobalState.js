@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // Initial State
 const initialState = {
-    userToken: false,
+    userToken: true,
     isLoading: false,
     isSignout: false,
     questions: [
@@ -68,7 +68,7 @@ export const GlobalProvider = ({ children }) => {
         });
     }
     function resetQuestionNo(no) {
-        console.log(no);
+        // console.log(no);
         dispatch({
             type: 'RESET_QUESTION_NO',
             payload: no
