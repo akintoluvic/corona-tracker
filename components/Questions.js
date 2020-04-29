@@ -27,10 +27,10 @@ const Questions = ({ navigation }) => {
             setCurrentResult([...currentResult, {questionNo: val}])
             setResult([...result, currentResult])
             resetQuestionNo(0)
-            console.log(result)
             setCurrentResult([])
+            console.log(result)
         } else {
-            incrementQuestionNo(questionNo);
+            incrementQuestionNo(questionNo)
             setCurrentResult([...currentResult, {questionNo: val}])
         }
     }
