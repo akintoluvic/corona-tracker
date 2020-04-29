@@ -23,9 +23,10 @@ const Questions = ({ navigation }) => {
     
     const scoreQuestion = (val) => {
         
-        if (currentResult.length === 13) {
-            resetQuestionNo(0)
+        if (currentResult.length === 12) {
+            setCurrentResult([...currentResult, {questionNo: val}])
             setResult([...result, currentResult])
+            resetQuestionNo(0)
             console.log(result)
             setCurrentResult([])
         } else {
