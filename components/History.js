@@ -53,11 +53,9 @@ const History = () => {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 25,
-        flexDirection: 'row',
-        alignItems: 'center',
+        // padding: 25,
         borderRadius: 15,
-        backgroundColor: '#22272C',
+        // backgroundColor: '#22272C',
     },
     contain: {
         paddingLeft: 20,
