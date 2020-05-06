@@ -30,15 +30,18 @@ const History = () => {
             // Date marking style [simple/period/multi-dot/custom]. Default = 'simple'
             markingType={'period'}
         />
+        <Text style={styles.analysis}>
+        You have only developed mild symptoms so, but do continue to isolate yourself.
+        </Text>
                 
-                {/* <TouchableOpacity 
-                    style={styles.btn}
-                    onPress={()=>{ }}
-                >
-                    <Text style={styles.btnText}>
-                        Track now
-                    </Text>
-                </TouchableOpacity> */}
+            <TouchableOpacity 
+                style={styles.btn}
+                onPress={()=>{ }}
+            >
+                <Text style={styles.btnText}>
+                        Take today's test
+                </Text>
+            </TouchableOpacity>
             
         </View>
       </>
@@ -65,12 +68,22 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 14,
     },
+    analysis: {
+        fontFamily: 'Roboto',
+        fontWeight: 'bold',
+        fontSize: 16,
+        lineHeight: 19,
+        textAlign: 'center',
+        color: '#4B5EB2',
+        paddingTop: 25,
+    },
     btn: {
         borderRadius: 5,
         backgroundColor: '#E49008',
-        marginTop: 7,
+        margin: 19,
         padding: 5,
-        width: 107
+        backgroundColor: '#F68D4B',
+        borderRadius: 5,
     },
     btnText: {
         color: '#fff',

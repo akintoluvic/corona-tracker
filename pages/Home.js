@@ -21,7 +21,7 @@ const Home = ({ navigation }) => {
       <ScrollView style={styles.scrollContainer}>
           <TrackNow quiz={takeQuiz} />
           <History />
-          <View>
+          <View style={styles.tips}>
             <Title title='Prevention, Tips and more' />
             <>
                 <Tip openFullTip={openTip} />
@@ -54,6 +54,9 @@ const styles = StyleSheet.create({
       paddingLeft: 25,
       paddingRight: 25,
     },
+    tips: {
+      marginTop: -10,
+    }
   });
 
 export default Home;
