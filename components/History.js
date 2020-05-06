@@ -19,15 +19,16 @@ const History = () => {
         <View style={styles.container}>
 
         <Calendar
-        // Collection of dates that have to be colored in a special way. Default = {}
-        markedDates={{
-            '2020-05-20': {textColor: 'green'},
-            '2020-05-22': {startingDay: true, color: 'green'},
-            '2020-05-23': {selected: true, endingDay: true, color: 'green', textColor: 'gray'},
-            '2020-05-04': {disabled: true, startingDay: true, color: 'yellow', endingDay: true}
-        }}
-        // Date marking style [simple/period/multi-dot/custom]. Default = 'simple'
-        markingType={'period'}
+            style={styles.calendar}
+            // Collection of dates that have to be colored in a special way. Default = {}
+            markedDates={{
+                '2020-05-20': {textColor: 'green'},
+                '2020-05-22': {startingDay: true, color: 'green'},
+                '2020-05-23': {selected: true, endingDay: true, color: 'green', textColor: 'gray'},
+                '2020-05-04': {disabled: true, startingDay: true, color: 'yellow', endingDay: true}
+            }}
+            // Date marking style [simple/period/multi-dot/custom]. Default = 'simple'
+            markingType={'period'}
         />
                 
                 {/* <TouchableOpacity 
@@ -46,8 +47,13 @@ const History = () => {
 
 const styles = StyleSheet.create({
     container: {
-        // padding: 25,
         borderRadius: 15,
+        // backgroundColor: '#22272C',
+    },
+    calendar: {
+        borderRadius: 15,
+        paddingBottom: 5,
+        paddingTop: 2,
         // backgroundColor: '#22272C',
     },
     contain: {
