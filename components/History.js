@@ -23,6 +23,7 @@ const History = () => {
             // Collection of dates that have to be colored in a special way. Default = {}
             markedDates={{
                 '2020-05-20': {startingDay: true, color: 'orange', textColor: 'white',  endingDay: true},
+                '2020-05-21': {startingDay: true, color: 'orange', textColor: 'white',  endingDay: true},
                 '2020-05-22': {startingDay: true, color: 'green'},
                 '2020-05-23': {selected: true, endingDay: true, color: 'green', textColor: 'gray'},
                 '2020-05-04': {disabled: true, startingDay: true, color: 'yellow', endingDay: true}
@@ -40,7 +41,7 @@ const History = () => {
             <Text style={{color: '#DD6243',}}>Severe</Text>
         </View>
         <Text style={styles.analysis}>
-        You have only developed mild symptoms so, but do continue to isolate yourself.
+            You have only developed mild symptoms so, but do continue to isolate yourself.
         </Text>
                 
             <TouchableOpacity 
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',
-        padding: 5,
+        padding: 20,
     },
     hero: {
         width: 13,
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
         lineHeight: 19,
         textAlign: 'center',
         color: '#4B5EB2',
-        paddingTop: 25,
+        paddingTop: 5,
     },
     btn: {
         borderRadius: 5,
