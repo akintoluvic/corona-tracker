@@ -17,26 +17,27 @@ const History = () => {
       <>
         <Title title='Daily Tracking History' />
         <View style={styles.container}>
-                <Calendar
-  markedDates={{
-    '2017-12-14': {
-      periods: [
-        {startingDay: false, endingDay: true, color: '#5f9ea0'},
-        {startingDay: false, endingDay: true, color: '#ffa500'},
-        {startingDay: true, endingDay: false, color: '#f0e68c'}
-      ]
-    },
-    '2017-12-15': {
-      periods: [
-        {startingDay: true, endingDay: false, color: '#ffa500'},
-        {color: 'transparent'},
-        {startingDay: false, endingDay: false, color: '#f0e68c'}
-      ]
-    }
-  }}
-  // Date marking style [simple/period/multi-dot/custom]. Default = 'simple'
-  markingType='multi-period'
-/>
+            <Calendar
+                markedDates={{
+                    '2020-05-14': {
+                    periods: [
+                        {startingDay: false, endingDay: true, color: '#5f9ea0'},
+                        {startingDay: false, endingDay: true, color: '#ffa500'},
+                        {startingDay: true, endingDay: false, color: '#f0e68c'}
+                    ]
+                    },
+                    '2020-05-15': {
+                    periods: [
+                        {startingDay: true, endingDay: false, color: '#ffa500'},
+                        {color: 'transparent'},
+                        {startingDay: false, endingDay: false, color: '#f0e68c'}
+                    ]
+                    }
+                }}
+                // Date marking style [simple/period/multi-dot/custom]. Default = 'simple'
+                markingType='multi-period'
+            />
+                
                 {/* <TouchableOpacity 
                     style={styles.btn}
                     onPress={()=>{ }}
