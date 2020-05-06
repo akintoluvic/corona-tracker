@@ -7,6 +7,7 @@ import {
   } from 'react-native';
 import HomeHeader from '../components/HomeHeader';
 import TrackNow from '../components/TrackNow';
+import History from '../components/History';
 import Tip from '../components/Tip';
 import Title from '../components/Title';
 
@@ -19,6 +20,7 @@ const Home = ({ navigation }) => {
       <View style={styles.scroll}>
       <ScrollView style={styles.scrollContainer}>
           <TrackNow quiz={takeQuiz} />
+          <History />
           <View>
             <Title title='Prevention, Tips and more' />
             <>

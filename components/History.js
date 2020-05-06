@@ -17,23 +17,34 @@ const History = () => {
       <>
         <Title title='Daily Tracking History' />
         <View style={styles.container}>
-            <Image source={require('../images/corona.png')} />
-            <View style={styles.contain}>
-                <Text style={styles.title}>
-                    Tracking your health
-                </Text>
-                <Text style={styles.title}>
-                    helps in early detection
-                </Text>
-                <TouchableOpacity 
+                <Calendar
+  markedDates={{
+    '2017-12-14': {
+      periods: [
+        {startingDay: false, endingDay: true, color: '#5f9ea0'},
+        {startingDay: false, endingDay: true, color: '#ffa500'},
+        {startingDay: true, endingDay: false, color: '#f0e68c'}
+      ]
+    },
+    '2017-12-15': {
+      periods: [
+        {startingDay: true, endingDay: false, color: '#ffa500'},
+        {color: 'transparent'},
+        {startingDay: false, endingDay: false, color: '#f0e68c'}
+      ]
+    }
+  }}
+  // Date marking style [simple/period/multi-dot/custom]. Default = 'simple'
+  markingType='multi-period'
+/>
+                {/* <TouchableOpacity 
                     style={styles.btn}
                     onPress={()=>{ }}
                 >
                     <Text style={styles.btnText}>
                         Track now
                     </Text>
-                </TouchableOpacity>
-            </View>
+                </TouchableOpacity> */}
             
         </View>
       </>
