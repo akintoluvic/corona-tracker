@@ -15,10 +15,10 @@ const Home = ({ navigation }) => {
   const takeQuiz = () => navigation.navigate('Quiz');
   const openTip = () => navigation.navigate('PreventionTips')
   return (
-    <SafeAreaView style={styles.home}>
+    <ScrollView style={styles.home}>
       <HomeHeader />
       <View style={styles.scroll}>
-      <ScrollView style={styles.scrollContainer}>
+      <View style={styles.scrollContainer}>
           <TrackNow quiz={takeQuiz} />
           <History />
           <View style={styles.tips}>
@@ -30,10 +30,10 @@ const Home = ({ navigation }) => {
                 <Tip openFullTip={openTip} />
             </>
           </View>
-      </ScrollView>
+      </View>
       </View>
 
-    </SafeAreaView>
+    </ScrollView>
   );
 };
 
