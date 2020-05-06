@@ -22,7 +22,7 @@ const History = () => {
             style={styles.calendar}
             // Collection of dates that have to be colored in a special way. Default = {}
             markedDates={{
-                '2020-05-20': {textColor: 'green'},
+                '2020-05-20': {startingDay: true, color: 'orange', textColor: 'white',  endingDay: true},
                 '2020-05-22': {startingDay: true, color: 'green'},
                 '2020-05-23': {selected: true, endingDay: true, color: 'green', textColor: 'gray'},
                 '2020-05-04': {disabled: true, startingDay: true, color: 'yellow', endingDay: true}
@@ -30,6 +30,15 @@ const History = () => {
             // Date marking style [simple/period/multi-dot/custom]. Default = 'simple'
             markingType={'period'}
         />
+
+        <View style={styles.legend}>
+            <View style={{...styles.hero, backgroundColor: '#517761',}}></View>
+            <Text style={{color: '#517761',}}>Normal</Text>
+            <View style={{...styles.hero, backgroundColor: '#FCC154',}}></View>
+            <Text style={{color: '#FCC154',}}>Mild</Text>
+            <View style={{...styles.hero, backgroundColor: '#DD6243',}}></View>
+            <Text style={{color: '#DD6243',}}>Severe</Text>
+        </View>
         <Text style={styles.analysis}>
         You have only developed mild symptoms so, but do continue to isolate yourself.
         </Text>
@@ -67,6 +76,18 @@ const styles = StyleSheet.create({
         fontFamily: 'Roboto',
         color: '#fff',
         fontSize: 14,
+    },
+    legend: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        padding: 5,
+    },
+    hero: {
+        width: 13,
+        height: 11,
+        borderRadius: 5,
     },
     analysis: {
         fontFamily: 'Roboto',
